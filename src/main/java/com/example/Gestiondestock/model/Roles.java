@@ -12,4 +12,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "Roles")
 public class Roles extends AbstractEntity{
+
+    private String nom;
 }
