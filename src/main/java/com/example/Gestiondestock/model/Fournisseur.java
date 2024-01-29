@@ -1,14 +1,13 @@
 package com.example.Gestiondestock.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.List;
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -20,7 +19,8 @@ public class Fournisseur extends AbstractEntity {
     @Column(name="prenom")
     private String prenom;
 
-    //private Adresse adresse;
+    @Embedded
+    private Adresse adresse;
 
     @Column(name = "photo")
     private String photo;
